@@ -1,0 +1,7 @@
+<add name="PhotoSharingContext" connectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\PhotoSharingDB.mdf;Integrated Security=True" providerName="System.Data.SqlClient" />
+
+Update Projects:
+----------------
+-Update NuGet Packages
+-Copy self-made-DataBase
+-Change 'Connection-String' to the above!
