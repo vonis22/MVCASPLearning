@@ -20,7 +20,8 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="FirstName" Type="nvarchar(max)" Nullable="false" />
     <Property Name="LastName" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Gender" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Gender" Type="bit" Nullable="false" />
+    <Property Name="BirthDate" Type="datetime" Nullable="false" />
     <Property Name="Address_Id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="AddressSet">
@@ -96,6 +97,7 @@
           <ScalarProperty Name="FirstName" ColumnName="FirstName" />
           <ScalarProperty Name="LastName" ColumnName="LastName" />
           <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

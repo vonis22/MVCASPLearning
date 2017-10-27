@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 10/27/2017 10:25:07
--- Generated from EDMX file: C:\Users\vince\source\repos\MVCBasics\MVCBasics\Models\DataModel.edmx
+-- Date Created: 10/27/2017 10:59:12
+-- Generated from EDMX file: D:\Workspaces\GU_Trainees\MVCASPLearning\MVCBasics\Models\DataModel.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -17,11 +17,20 @@ GO
 -- Dropping existing FOREIGN KEY constraints
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[FK_ProfileAddresses]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[ProfileSet] DROP CONSTRAINT [FK_ProfileAddresses];
+GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[ProfileSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[ProfileSet];
+GO
+IF OBJECT_ID(N'[dbo].[AddressSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[AddressSet];
+GO
 
 -- --------------------------------------------------
 -- Creating all tables
@@ -32,7 +41,8 @@ CREATE TABLE [dbo].[ProfileSet] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [FirstName] nvarchar(max)  NOT NULL,
     [LastName] nvarchar(max)  NOT NULL,
-    [Gender] nvarchar(max)  NOT NULL,
+    [Gender] bit  NOT NULL,
+    [BirthDate] datetime  NOT NULL,
     [Address_Id] int  NOT NULL
 );
 GO
