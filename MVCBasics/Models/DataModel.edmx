@@ -64,8 +64,9 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="FirstName" Type="String" Nullable="false" />
           <Property Name="LastName" Type="String" Nullable="false" />
-          <Property Name="Gender" Type="String" Nullable="false" />
+          <Property Name="Gender" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="Address" Relationship="DataModel.ProfileAddresses" FromRole="Profile" ToRole="Addresses" />
+          <Property Name="BirthDate" Type="DateTime" Nullable="false" />
         </EntityType>
         <EntityType Name="Address">
           <Key>
